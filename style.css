@@ -4,6 +4,24 @@
   box-sizing: border-box;
 }
 
+html{
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgb(230, 113, 113);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(245, 22, 10, 0.362);
+  border-radius: 20px;
+  border: 3px solid rgba(245, 22, 10, 0.362);
+}
+
 header{
   border: 1px solid;
 }
@@ -136,65 +154,75 @@ header{
   }
 }
 
-
-.main-foto{
-width: 100%;
-height: 395px;
-display: flex;
-align-items: center;
-justify-content: center;
-border: 1px solid;
+main{
+  background-color: rgba(245, 22, 10, 0.362);
+  border: 1px solid black;
+  width: 100%;
+  height: auto;
 }
 
-.sobreEmpresa{
-display: flex;
-flex-direction: column;
-margin-top: 95px;
-background-color: rgb(230, 113, 113);
-height: 150;
-}
-
-.sobreEmpresa p{
-font-size: 30px;
-color: aliceblue;
-padding: auto;
-text-align: center;
-line-height: 50%;
+.container-card{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  width: 92%;
+  margin: 0 auto;
+  text-align: center;
+  
 
 }
+
+
+.container-card .card{
+  display: flex;
+  flex-direction: column; 
+  padding:30px ;
+  width: 100%;
+  align-items: center;
+}
+
+
+
+.container-card .card img{
+  width: 450px;
+}
+
+
 
 footer{
   display: flex;
   width: 100%;
-  height: 30%;
-  position: fixed;
-  bottom: 0;
+  height: 25%;
   background-color: rgba(245, 22, 10, 0.362); 
+  
 }
 
 .container-footer{
   display: flex;
-  gap: 30px;
+  gap: 10px;
   flex-direction: column;
-  border: 1px solid;
+  border: 1px solid black;
   width: 100%;
+  
 }
 
 .footer-redes-sociais ul{ 
   font-size: 30px; 
   display: flex;
   width: 100%;
-  height: 50px;
+  height: 30px;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   list-style: none;
+  padding: 20px 0 ;
   background-color: rgb(230, 113, 113);
 }
 
 .footer-redes-sociais ul a{
   color: black;
   text-decoration: none;
+  gap: 10px;
+  
 }
 
 .footer-contatos ul{
@@ -203,10 +231,10 @@ footer{
   font-size: 20px; 
   display: flex;
   width: 100vw;
-  height: 50px;
+  height: 35px;
   align-items: center;
   justify-content: center;
-  gap: 20px;
+  gap: 10px;
   list-style: none;
   text-decoration: none;
   flex-direction: column;
@@ -219,16 +247,98 @@ footer{
   text-align: center;
   display: flex;
   align-items: center;
+  width: 100%;
+ }
+
+.sobreEmpresa{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96%;
+  height: 200px;
+  text-align: center;
+  border-top: 2px solid;
+  border-image: linear-gradient(to right, transparent, rgb(230, 113, 113), transparent)2;
+  padding:0 2% ;
+  gap: 40px;
+}
+
+#sobreNos img{
+  width: 200px;
+  height: 100px
+}
+
+@media screen and (max-width:1024px) {
+  .frase-sobrenos h2{
+    font-size: 20px;
+  }
   
 }
 
-.pagina-login{
-  background-color: rgb(230, 113, 113);
 
-
+@media screen and (max-width: 743px) {
+  .frase-sobrenos h2{
+    font-size: 18px;
+  }
+  
 }
 
-.login.html{
-background-color: blue;
+@media screen and (max-width: 639px) {
+  .frase-sobrenos h2{
+    font-size: 16px;
+  }
+  
+}
 
+
+
+@media screen and (max-width: 538px) {
+  .sobreEmpresa{
+    display: flex;
+    text-align: center;
+    font-size: 14px;
+    padding: 2px;
+  }
+  
+}
+
+@media screen and (max-width: 530px) {
+  .sobreEmpresa{
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    height: auto;
+    padding: 30px 20px;
+  }
+  #sobreNos img{
+    width: 150px;
+    height: 75px;
+    font-size: 14px;
+
+  }
+}
+
+@media screen and (max-width:483px) {
+  #sobreNos img{
+    width: 100px;
+    height:50px;
+  };
+  .frase-sobrenos h2{
+    font-size: 14px;
+  }
+  .container-card .card img{
+    width: 250px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container-card .card img{
+    width: 200px;
+  }
+  .container-card{
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  .container-card .card img{
+    width: 250px;
+  }
 }
