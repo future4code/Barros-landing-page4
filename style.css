@@ -155,7 +155,7 @@ header{
 }
 
 main{
-  background-color: rgba(245, 22, 10, 0.362);
+  background-color: #d0d5dae0;
   border: 1px solid black;
   width: 100%;
   height: auto;
@@ -167,6 +167,7 @@ main{
   width: 92%;
   margin: 0 auto;
   text-align: center;
+
   
 
 }
@@ -186,6 +187,10 @@ main{
   width: 450px;
 }
 
+.container-card .card h3{
+text-decoration: none;
+color: black;
+}
 
 
 footer{
@@ -231,12 +236,11 @@ footer{
   font-size: 20px; 
   display: flex;
   width: 100vw;
-  height: 35px;
+  height: 150px;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 30px;
   list-style: none;
-  text-decoration: none;
   flex-direction: column;
 }
 
@@ -263,31 +267,61 @@ footer{
   gap: 40px;
 }
 
+.frase-sobrenos h2{
+  margin-right: 200px;
+padding: 20px;
+}
+
 #sobreNos img{
   width: 200px;
   height: 100px
 }
 
+.map{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  gap: 10px;
+}
+
 @media screen and (max-width:1024px) {
-  .frase-sobrenos h2{
+  .frase-sobrenos h3{
     font-size: 20px;
+  }
+  
+}
+
+@media screen and (max-width: 830px){ 
+  .map iframe{
+    width: 600px;
+    height: 250px;
+    
   }
   
 }
 
 
 @media screen and (max-width: 743px) {
-  .frase-sobrenos h2{
+  .frase-sobrenos h3{
     font-size: 18px;
+  }
+  .frase-sobrenos h2{
+    margin-right: 0;
   }
   
 }
 
 @media screen and (max-width: 639px) {
-  .frase-sobrenos h2{
+  .frase-sobrenos h3{
     font-size: 16px;
   }
-  
+  .map iframe{
+    width: 450px;
+    height: 250px;
+    
+  }
 }
 
 
@@ -329,6 +363,12 @@ footer{
   .container-card .card img{
     width: 250px;
   }
+  .map iframe{
+    width: 350px;
+    height: 150px;
+    padding: auto;
+    
+  }
 }
 
 @media screen and (max-width: 375px) {
@@ -342,3 +382,14 @@ footer{
     width: 250px;
   }
 }
+
+a:link, a:visited, a:active {
+	text-decoration:none;
+	}
+a:hover {
+	text-decoration: underline;
+	color:#000;
+	background:rgb(230, 113, 113);
+  border-radius: 50%;
+  transform: rotate(5deg);
+	}
