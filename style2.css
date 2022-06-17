@@ -32,7 +32,9 @@ body{
     margin-left: 36%;
     margin-top: 15%;
     justify-content: center;
+  
 }
+
 
 /* Elementos de tags <body>, <input> e <button> */
 input, button {
@@ -77,6 +79,18 @@ fieldset.grupo .campo {
     top: 51%;
     left: 46%;
     margin-right: -50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%)    
+    
+
 }
+
+a:link, a:visited, a:active {
+	text-decoration:none;
+	}
+a:hover {
+	text-decoration: underline;
+	color:#000;
+	background:#ff0;
+	}
+
 
